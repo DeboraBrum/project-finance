@@ -1,0 +1,9 @@
+spring:
+  datasource:
+    jdbcUrl: ${DATABASE_URL:jdbc:postgresql://localhost:5432/finance_helper}
+    username: ${DB_USER:postgres}
+    password: ${DB_PASS:postgres}
+    connection-test-query: "SELECT 1"
+    leak-detection-threshold: 50000
+    maximum-pool-size: 5
+    pool-name: "HikariPool-Write"
